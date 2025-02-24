@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit Dairy - Fresh Dairy Products</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+<body>
+    <header>
+        अंकित डेयरी | Ankit Dairy
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#cart">Cart</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Add Hero Section Here -->
+    <section id="hero">
+        <h1>Welcome to Ankit Dairy</h1>
+        <p>Fresh and high-quality dairy products delivered to your home.</p>
+        <a href="#products" class="cta-button">Explore Products</a>
+    </section>
+    
+    <section id="home">
+        <h2>Welcome to Ankit Dairy</h2>
+        <p>Fresh and high-quality dairy products delivered to your home.</p>
+    </section>
+    
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-list">
+            <div class="product" data-name="Yogurt" data-price="80">
+                <img src="images/image1.png" alt="Yogurt" class="product-image">
+                <h3>दही | Yogurt - ₹80/kg</h3>
+                <p>Fresh and homemade yogurt.</p>
+                <button onclick="addToCart(0)">Add to Cart</button>
+                <div class="payment-button" style="display: none; margin-top: 10px;">
+                    <button onclick="payWithGooglePay()">Pay with Google Pay</button>
+                </div>
+            </div>
+            <div class="product" data-name="Milk" data-price="50">
+                <img src="images/image2.png" alt="Yogurt" class="product-image">
+                <h3>दूध | Milk - ₹50/liter</h3>
+                <p>Pure and fresh cow milk.</p>
+                <button onclick="addToCart(1)">Add to Cart</button>
+                <div class="payment-button" style="display: none; margin-top: 10px;">
+                    <button onclick="payWithGooglePay()">Pay with Google Pay</button>
+                </div>
+            </div>
+            <div class="product" data-name="Ghee" data-price="800">
+                <img src="images/image3.png" alt="Yogurt" class="product-image">
+                <h3>घी | Ghee - ₹800/kg</h3>
+                <p>Organic and homemade ghee.</p>
+                <button onclick="addToCart(2)">Add to Cart</button>
+                <div class="payment-button" style="display: none; margin-top: 10px;">
+                    <button onclick="payWithGooglePay()">Pay with Google Pay</button>
+                </div>
+            </div>
+            <div class="product" data-name="Paneer" data-price="320">
+                <img src="images/image4.png" alt="Yogurt" class="product-image">
+                <h3>पनीर | Cottage Cheese - ₹320/kg</h3>
+                <p>Fresh and homemade cottage cheese.</p>
+                <button onclick="addToCart(3)">Add to Cart</button>
+                <div class="payment-button" style="display: none; margin-top: 10px;">
+                    <button onclick="payWithGooglePay()">Pay with Google Pay</button>
+                </div>
+            </div>
+            <div class="product" data-name="Butter" data-price="400">
+                <img src="images/image5.png" alt="Yogurt" class="product-image">
+                <h3>मक्खन | Butter - ₹400/kg</h3>
+                <p>Fresh and creamy butter.</p>
+                <button onclick="addToCart(4)">Add to Cart</button>
+                <div class="payment-button" style="display: none; margin-top: 10px;">
+                    <button onclick="payWithGooglePay()">Pay with Google Pay</button>
+                </div>
+            </div>
+            <div class="product" data-name="Khova" data-price="340">
+                <img src="images/image6.png" alt="Yogurt" class="product-image">
+                <h3>खोवा | Mawa - ₹340/kg</h3>
+                <p>Fresh mawa made from pure milk solids.</p>
+                <button onclick="addToCart(5)">Add to Cart</button>
+                <div class="payment-button" style="display: none; margin-top: 10px;">
+                    <button onclick="payWithGooglePay()">Pay with Google Pay</button>
+                </div>
+            </div>
+            <div class="product" data-name="Frozen Matter" data-price="160">
+                <img src="images/image7.png" alt="Yogurt" class="product-image">
+                <h3>फ्रोजन मैटर | Frozen Dairy Products - ₹160/kg</h3>
+                <p>Freshly frozen dairy products.</p>
+                <button onclick="addToCart(6)">Add to Cart</button>
+                <div class="payment-button" style="display: none; margin-top: 10px;">
+                    <button onclick="payWithGooglePay()">Pay with Google Pay</button>
+                </div>
+            </div>
+            <div class="product" data-name="Paneer Masala" data-price="10">
+                <img src="images/image8.png" alt="Yogurt" class="product-image">
+                <h3>पनीर मसाला | Paneer Spice Mix - ₹10/packet</h3>
+                <p>Special spice mix for paneer dishes.</p>
+                <button onclick="addToCart(7)">Add to Cart</button>
+                <div class="payment-button" style="display: none; margin-top: 10px;">
+                    <button onclick="payWithGooglePay()">Pay with Google Pay</button>
+                </div>
+            </div>
+            <div class="product" data-name="Raita Bundi" data-price="10">
+                <img src="images/image9.png" alt="Yogurt" class="product-image">
+                <h3>रायता बूंदी | Fried Gram Flour Balls for Raita - ₹10/packet</h3>
+                <p>Perfect for making raita.</p>
+                <button onclick="addToCart(8)">Add to Cart</button>
+                <div class="payment-button" style="display: none; margin-top: 10px;">
+                    <button onclick="payWithGooglePay()">Pay with Google Pay</button>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+    <section id="cart">
+        <h2>Shopping Cart</h2>
+        <div id="cart-items"></div>
+        <p>Total: ₹<span id="total-price">0</span></p>
+        
+        <button id="gpay-button" style="display:none;">Pay with Google Pay</button>
+    
+        <!-- Add QR Code for UPI Payments -->
+        <div id="qr-code">
+            <h3>Scan to Pay via UPI</h3>
+            <img src="images\QR Code.jpg" alt="UPI QR Code" style="width: 200px; height: 200px;">
+            <p>UPI ID: surajpandey9174-1@okhdfcbank</p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>📍 Location: Raigarh, Chhattisgarh</p>
+        <p>📞 Phone: +91 9174962201</p>
+        <p>📧 Email: suraj@ankitdairy.com</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Ankit Dairy. All Rights Reserved.</p>
+    </footer>
+    
+    
+</body>
+</html>
